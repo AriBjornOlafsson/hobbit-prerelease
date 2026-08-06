@@ -197,26 +197,6 @@
 
   var supportsHover = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
-  if(!supportsHover){
-    // no mouse to hover with — let a finger-drag across the popped card tilt it instead
-    cardFace.style.pointerEvents = 'auto';
-    cardFace.style.touchAction = 'none';
-    var dragging = false;
-    cardFace.addEventListener('touchstart', function(){
-      if(activeLink) dragging = true;
-    }, {passive:true});
-    cardFace.addEventListener('touchmove', function(e){
-      if(!dragging) return;
-      e.preventDefault();
-      var t = e.touches[0];
-      tiltFromEvent({clientX: t.clientX, clientY: t.clientY}, cardFace);
-    }, {passive:false});
-    cardFace.addEventListener('touchend', function(){
-      dragging = false;
-      resetTilt();
-    });
-  }
-
   document.querySelectorAll('.cardlink').forEach(function(link){
     var widenTo = link.closest('.chip') || link.parentElement;
     // Only widen the hover/click target to a shared ancestor when that
@@ -237,11 +217,36 @@
       container.addEventListener('mouseleave', function(){ resetTilt(); hideCard(); });
       link.addEventListener('focus', function(){ showCard(link); });
       link.addEventListener('blur', function(){ resetTilt(); hideCard(); });
+      container.addEventListener('click', function(e){
+        e.preventDefault();
+        if(activeLink === link){ hideCard(); } else { showCard(link); }
+      });
+    } else {
+      // Touch: one continuous gesture. Press opens the card immediately and
+      // starts tracking that same finger for the tilt effect; dragging (even
+      // once your finger has moved off the link itself) keeps tilting it;
+      // lifting your finger settles the tilt but leaves the card open. A
+      // second press on an already-open card's own link closes it.
+      var dragging = false;
+      container.addEventListener('touchstart', function(e){
+        e.preventDefault();
+        if(activeLink === link){ hideCard(); return; }
+        showCard(link);
+        dragging = true;
+        var t = e.touches[0];
+        tiltFromEvent({clientX: t.clientX, clientY: t.clientY}, container);
+      }, {passive:false});
+      container.addEventListener('touchmove', function(e){
+        if(!dragging) return;
+        e.preventDefault();
+        var t = e.touches[0];
+        tiltFromEvent({clientX: t.clientX, clientY: t.clientY}, container);
+      }, {passive:false});
+      container.addEventListener('touchend', function(){
+        dragging = false;
+        resetTilt();
+      });
     }
-    container.addEventListener('click', function(e){
-      e.preventDefault();
-      if(activeLink === link){ hideCard(); } else { showCard(link); }
-    });
   });
 
   // tap outside the open preview (touch devices have no mouseleave) closes it
