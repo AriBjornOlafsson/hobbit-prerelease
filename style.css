@@ -353,11 +353,17 @@
     transition: transform .1s ease-out, scale .1s ease-out;
     scale: 1;
   }
-  /* pointer-events only turns on while actually visible — otherwise this
-     fixed-position, invisible element would sit on top of whatever's
-     underneath at its last shown spot and silently swallow taps meant for
-     other cards */
-  .cardpop.show .cardpop-face{ scale: 1.035; pointer-events: auto; }
+  .cardpop.show .cardpop-face{ scale: 1.035; }
+  /* Touch only: pointer-events turns on here while visible, so a tap can
+     close it — otherwise this fixed-position, invisible element would sit
+     on top of whatever's underneath at its last shown spot and silently
+     swallow taps meant for other cards. Scoped to touch devices specifically
+     because on desktop, making it interactive at all lets it sit on top of
+     the hovered link/chip underneath and steal the mousemove/mouseleave
+     events the tilt effect and hover-to-close rely on. */
+  @media (hover: none), (pointer: coarse){
+    .cardpop.show .cardpop-face{ pointer-events: auto; }
+  }
   .cardpop-face::before{
     /* rainbow foil sweep */
     content:""; position:absolute; inset:-20%;

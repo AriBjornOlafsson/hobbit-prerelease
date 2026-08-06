@@ -1,0 +1,16 @@
+{
+  "name": "The Hobbit — A Drafter's Field Guide",
+  "short_name": "Hobbit Guide",
+  "description": "An unofficial drafter's guide to The Hobbit limited format: archetypes, commons, tricks, fixing, and the rares/mythics tier list.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#172a18",
+  "theme_color": "#172a18",
+  "icons": [
+    { "src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icons/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

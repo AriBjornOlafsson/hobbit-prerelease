@@ -275,4 +275,10 @@
       if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); tab.click(); }
     });
   });
+
+  if('serviceWorker' in navigator){
+    window.addEventListener('load', function(){
+      navigator.serviceWorker.register('sw.js');
+    });
+  }
 })();
