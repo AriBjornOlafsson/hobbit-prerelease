@@ -225,50 +225,13 @@
   });
 
   if(!supportsHover){
-    // Touch: opening happens above via plain click (a genuine tap — a scroll
-    // starting on the link never fires one, so this is naturally tap-only).
-    // Everything else happens on the popped-up card face itself: a tap on it
-    // closes it, a gentle drag tilts it, and a drag that's aggressively
-    // vertical is treated as "the user actually wants to scroll" and is
-    // handed off to the page instead of the tilt effect.
+    // Touch: click to open (above), click to close (here) — no drag/tilt
+    // gesture at all. cardFace keeps the default pointer-events:none from
+    // .cardpop except for this one listener's purposes, so dragging anywhere,
+    // including across the popped-up card, always just scrolls the page
+    // natively rather than being captured for a tilt effect.
     cardFace.style.pointerEvents = 'auto';
-    cardFace.style.touchAction = 'none';
-    var startX = 0, startY = 0, lastX = 0, lastY = 0, moved = false, scrolling = false;
-    var TAP_SLOP = 10;       // px of wiggle still counted as a tap, not a drag
-    var SCROLL_MIN = 18;     // px of vertical travel before a swipe can count as "aggressive"
-    var SCROLL_RATIO = 1.4;  // how much more vertical than horizontal that swipe needs to be
-
-    cardFace.addEventListener('touchstart', function(e){
-      if(!activeLink) return;
-      var t = e.touches[0];
-      startX = lastX = t.clientX;
-      startY = lastY = t.clientY;
-      moved = false;
-      scrolling = false;
-    }, {passive:true});
-
-    cardFace.addEventListener('touchmove', function(e){
-      if(!activeLink) return;
-      var t = e.touches[0];
-      var dx = t.clientX - startX, dy = t.clientY - startY;
-      var stepY = t.clientY - lastY;
-      lastX = t.clientX; lastY = t.clientY;
-      if(Math.abs(dx) > TAP_SLOP || Math.abs(dy) > TAP_SLOP) moved = true;
-
-      if(scrolling || (Math.abs(dy) > SCROLL_MIN && Math.abs(dy) > Math.abs(dx) * SCROLL_RATIO)){
-        scrolling = true;
-        window.scrollBy(0, -stepY); // hands off to the page; this also closes the card via the scroll listener below
-        return;
-      }
-      e.preventDefault();
-      tiltFromEvent({clientX: t.clientX, clientY: t.clientY}, cardFace);
-    }, {passive:false});
-
-    cardFace.addEventListener('touchend', function(){
-      if(!activeLink || scrolling) return;
-      if(!moved){ hideCard(); }   // a tap on the open card closes it
-      else{ resetTilt(); }        // was a tilt drag — settle flat, stay open
-    });
+    cardFace.addEventListener('click', function(){ hideCard(); });
   }
 
   // tap outside the open preview (touch devices have no mouseleave) closes it
