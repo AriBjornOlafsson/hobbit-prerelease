@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Hobbit — A Drafter's Field Guide</title>
+<meta name="description" content="An unofficial drafter's guide to The Hobbit limited format: archetypes, commons, tricks, fixing, rares, and hover-to-preview real cards.">
+
+<!-- Open Graph / Facebook, Discord, Slack, LinkedIn -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Hobbit — A Drafter's Field Guide">
+<meta property="og:description" content="An unofficial drafter's guide to The Hobbit limited format: archetypes, commons, tricks, fixing, rares, and hover-to-preview real cards.">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Hobbit — A Drafter's Field Guide, featuring Smaug the Magnificent">
+<meta property="og:site_name" content="The Hobbit — A Drafter's Field Guide">
+
+<!-- Twitter/X Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Hobbit — A Drafter's Field Guide">
+<meta name="twitter:description" content="An unofficial drafter's guide to The Hobbit limited format: archetypes, commons, tricks, fixing, rares, and hover-to-preview real cards.">
+<meta name="twitter:image" content="assets/og-image.jpg">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A7%99%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cinzel+Decorative:wght@700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="banner">
+  <div class="embers"></div>
+  <div class="eyebrow">A Field Companion for Limited Play</div>
+  <h1>The Hobbit</h1>
+  <p class="sub">An unofficial drafter's guide to the archetypes, commons, tricks, and hidden traps of the set — compiled for those setting out to their first prerelease.</p>
+  <svg class="mountains" viewBox="0 0 1200 150" preserveAspectRatio="none" aria-hidden="true">
+    <polygon points="0,150 0,90 120,30 250,80 340,15 460,95 600,40 720,100 860,55 980,110 1100,60 1200,95 1200,150" fill="#0f1a10"/>
+    <polygon points="0,150 0,120 150,70 300,110 420,60 560,115 700,75 850,120 1000,90 1150,125 1200,110 1200,150" fill="#152316" opacity="0.85"/>
+  </svg>
+</div>
+
+<div class="wrap">
+  <div class="book">
+    <nav class="tabs" id="tabs">
+      <div class="tab active" data-tab="overview"><span class="num">I</span> Overview</div>
+      <div class="tab" data-tab="mechanics"><span class="num">II</span> Mechanics</div>
+      <div class="tab" data-tab="archetypes"><span class="num">III</span> The Five Pairs</div>
+      <div class="tab" data-tab="commons"><span class="num">IV</span> Common Wisdom</div>
+      <div class="tab" data-tab="tricks"><span class="num">V</span> Tricks &amp; Wards</div>
+      <div class="tab" data-tab="fixing"><span class="num">VI</span> Waymarks</div>
+      <div class="tab" data-tab="rares"><span class="num">VII</span> The Hoard</div>
+      <div class="tab" data-tab="tips"><span class="num">VIII</span> Field Notes</div>
+      <div class="tab" data-tab="second"><span class="num">IX</span> A Second Read</div>
+      <div class="tab" data-tab="credits"><span class="num">X</span> Credits</div>
+    </nav>
+
+    <div class="panel">
+
+      <!-- I. OVERVIEW -->
+      <section class="section active" id="sec-overview">
+        <h2 class="chapter"><span class="roman">I.</span> Overview</h2>
+        <div class="chapter-rule"></div>
+        <p class="lede">This is a small set — only <strong>five supported color-pair archetypes</strong> exist, rather than the usual wider spread. Know your five pairs before you sit down to build or draft, because straying outside them tends to leave a deck without a real plan.</p>
+        <p>Expect this to play closer to a set like <em>Marvel Superheroes</em> than to weaker small sets like <em>Teenage Mutant Ninja Turtles</em> or <em>Spider-Man</em> — but with fewer late-game mana sinks. There isn't much to spend excess mana on once you're deep into a game, so card advantage and efficient curves matter more than big splashy top-end plays. This set plays a notch above normal power level at every rarity, commons included — if a Hobbit common feels unusually good, you're probably not misreading it.</p>
+        <p><strong>Predicted format speed: Medium.</strong> Four of the five color pairs play as mid-range decks. Only one — <span class="cardlink" data-card="chiefwarg">Black/Green</span> — is genuinely aggressive this time around.</p>
+        <div class="callout tip-callout"><strong>Field note:</strong> Don't force synergy. Every archetype in this guide rewards playing good cards first and letting the theme (Storied, Landfall, Ferocious, Amass) be a bonus — with a few notable build-around exceptions called out below.</div>
+      </section>
+
+      <!-- II. MECHANICS -->
+      <section class="section" id="sec-mechanics">
+        <h2 class="chapter"><span class="roman">II.</span> Set Mechanics</h2>
+        <div class="chapter-rule"></div>
+        <div class="mech-grid">
+          <div class="mech-item">
+            <div class="mname">Storied <span class="pips"><span class="pip pip-r">R</span><span class="pip pip-w">W</span></span></div>
+            <p>Once you control three or more of (artifacts, legendaries, sagas), you gain a permanent "enduring story" for the rest of the game — the same "can't be lost once earned" template as Ascend's City's Blessing. Cards with Storied get upgraded once that threshold is hit — mostly a Red/White theme. Common legendaries tend to be cheap creatures that trade off early, but losing the creature doesn't remove the emblem once earned. <strong>Tokens count too</strong> — a Food or Treasure token is still an artifact for this purpose, so token-makers can help you hit the threshold even with a thin legendary/Saga count. Storied permanents themselves only show up at common/uncommon on legendary creatures — the sagas and other permanents that <em>care</em> about Storied are uncommon/rare-only.</p>
+          </div>
+          <div class="mech-item">
+            <div class="mname">Landfall <span class="pips"><span class="pip pip-u">U</span><span class="pip pip-g">G</span></span></div>
+            <p>Triggers whenever a land enters the battlefield under your control — including your normal land drop, so it fires at least once most turns for free. Extra land drops and land-fetch effects let you trigger it more than once a turn. Central to Blue/Green, where it's paired with an Elves sub-theme.</p>
+          </div>
+          <div class="mech-item">
+            <div class="mname">Recruit <span class="pips"><span class="pip pip-u">U</span><span class="pip pip-w">W</span></span></div>
+            <p>Draw a card, then discard a card. If the discard is a nonland, create a 1/1 Human Soldier token instead of a +1/+1 counter. A reskinned Connive that favors Human and token payoffs (Blue/White) — but where Connive tends to push a deck toward attacking (counters on your team), Recruit's cheap ground blocker tends to <em>prolong</em> games instead, which is part of why Blue/White leans controlling rather than aggressive. There's nothing wrong with discarding a land if the card in your hand matters more than a 1/1.</p>
+          </div>
+          <div class="mech-item">
+            <div class="mname">Adventure <span class="pips"><span class="pip pip-w">W</span><span class="pip pip-u">U</span><span class="pip pip-b">B</span><span class="pip pip-r">R</span><span class="pip pip-g">G</span></span></div>
+            <p>Cards may have an Adventure side, castable only before the creature side is cast. <strong>Always cast the Adventure side first</strong> — casting the creature first permanently forfeits the Adventure half. Nearly always good in limited since it's two cards in one. Not tied to one color pair — it shows up across all five colors.</p>
+          </div>
+          <div class="mech-item">
+            <div class="mname">Amass Goblins X <span class="pips"><span class="pip pip-b">B</span><span class="pip pip-r">R</span></span></div>
+            <p>Put X +1/+1 counters on an Army you control (making a 0/0 Goblin Army token first if needed). Additional Amass triggers grow the <em>same</em> token rather than making new ones — a "grow one threat" mechanic, not a go-wide one. That doesn't mean it's a one-note plan, though: Black/Red actually supports two distinct lines with it — keep piling counters onto one Army and swing with a growing threat, or repeatedly sacrifice it for value via a sac outlet and Amass again to rebuild a fresh one. Central to Black/Red.</p>
+          </div>
+          <div class="mech-item">
+            <div class="mname">Ferocious <span class="pips"><span class="pip pip-b">B</span><span class="pip pip-g">G</span></span></div>
+            <p>Checks whether you control a creature with power 4 or greater, granting a bonus if so. Triggers at the beginning of combat or on attack, which pushes the deck to actually get in there rather than sit back. Central to Black/Green — the format's only real aggro pair.</p>
+          </div>
+          <div class="mech-item">
+            <div class="mname">Hone Counters <span class="pips"><span class="pip pip-r">R</span><span class="pip pip-w">W</span></span></div>
+            <p>A new counter type that lives on Equipment rather than creatures: each Hone counter adds +1/+0 to whatever the equipment is attached to, on top of the equipment's own bonus. Only appears on two rares in the set, so it won't come up often — but worth recognizing when it does.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- III. ARCHETYPES -->
+      <section class="section" id="sec-archetypes">
+        <h2 class="chapter"><span class="roman">III.</span> The Five Pairs</h2>
+        <div class="chapter-rule"></div>
+        <p>All five supported color pairs, ranked roughly by expected strength.</p>
+
+        <div class="archetype-card">
+          <div class="archetype-head" style="background:linear-gradient(90deg,#8c3b2e,#cbb872);">
+            <span class="pair">Black / Red — Amass Goblins <span class="pips"><span class="pip pip-b">B</span><span class="pip pip-r">R</span></span></span>
+            <span class="tag">predicted best</span>
+          </div>
+          <div class="archetype-body">
+            <p>Amass goblin armies, then <strong>sacrifice them for value</strong> rather than growing one giant creature. A near-identical mechanic in a prior Lord of the Rings set was one of that set's best pairs — expect similar performance here.</p>
+            <p class="key-cards-label">Key cards:</p>
+            <ul class="key-cards">
+              <li><span class="cardlink" data-card="bulg">Bolg of the North</span> — sac a creature to fight, spill excess damage into amass</li>
+              <li><span class="cardlink" data-card="uglygoblin">Great Ugly-Looking Goblin</span> — menace lord with a free Adventure-side amass</li>
+              <li><span class="cardlink" data-card="mistyraider">Misty Mountains Raider</span> — amasses 2 on every attack without tapping itself</li>
+              <li><span class="cardlink" data-card="snowslope">Snowslope Hunter</span> — repeatable sac outlet that impulse-draws</li>
+              <li><span class="cardlink" data-card="rhovanion">Rhovanion Rampager</span> — 3/2 for 3 that saccs a creature on attack for counters equal to its power, then Amasses that much on death — a two-for-one no matter which half of its life cycle you're using</li>
+              <li><span class="cardlink" data-card="noisemaker">Bothersome Noisemaker</span> — 2/2 for 2 that Amasses off every noncreature spell you cast; wants real spell density (~11 creatures is a reasonable floor to still turn this on)</li>
+            </ul>
+            <div class="callout"><strong>Archetype tip:</strong> Trading your army quickly is usually better than growing it into one giant threat — a single big creature dies to one removal spell, but repeatedly cashing in small armies via a sac outlet is far harder to interact with profitably. <span class="cardlink" data-card="tidingsofwar">Tidings of War</span> is a clean 1-mana Amass 1 with flashback for 3R that can enable an aggressive turn-1-into-turn-2 attack.</div>
+          </div>
+        </div>
+
+        <div class="archetype-card">
+          <div class="archetype-head" style="background:linear-gradient(90deg,#3a2a3a,#3e5c3a);">
+            <span class="pair">Black / Green — Ferocious <span class="pips"><span class="pip pip-b">B</span><span class="pip pip-g">G</span></span></span>
+            <span class="tag">the format's only true aggro deck</span>
+          </div>
+          <div class="archetype-body">
+            <p>Cares about <strong>Ferocious</strong> (a creature with power 4+), with a Wolves/Bears tribal sub-theme layered on top. This is the one genuinely fast deck in an otherwise mid-range format — build low and apply pressure early.</p>
+            <p class="key-cards-label">Key cards:</p>
+            <ul class="key-cards">
+              <li><span class="cardlink" data-card="chiefwarg">The Chief Warg</span> — menace, draws a card every attack once Ferocious</li>
+              <li><span class="cardlink" data-card="rabbit">Nasty Little Rabbit</span> — a 1-drop that grows itself for free once you're Ferocious</li>
+              <li><span class="cardlink" data-card="prowler">Desolation Prowler</span> — +2/+2 for 2 life, no mana — activatable once on your turn <em>and</em> once on the opponent's, so it can threaten combat math twice a round</li>
+              <li><span class="cardlink" data-card="bejorn">Beorn the Fierce</span> — 6/6 trample finisher that also anthems your other Bears +2/+2 and turns your board into Bears over time</li>
+              <li><span class="cardlink" data-card="ordinarybear">Ordinary Bear</span> — a plain vanilla 4/5 for 4; "no abilities" is the point, since it's just a clean, cheap way to have a power-4+ creature in play</li>
+              <li><span class="cardlink" data-card="wargling">Wargling</span> / <span class="cardlink" data-card="duskwatchhunter">Duskwatch Hunter</span> — cheap early bridges that are fine on their own and scale hard once Ferocious turns on (Wargling grants the whole team trample on attack; Duskwatch Hunter is a same-turn +1/+1 counter that reliably hits 4 power by turn 3)</li>
+            </ul>
+            <div class="callout tip-callout"><strong>Archetype tip:</strong> Prioritize cards that buff small creatures into Ferocious range, like <span class="cardlink" data-card="trollneg">Troll Negotiations</span> — a rare two-for-one that removes a blocker <em>and</em> enables your payoffs. Aim for roughly 8-10 creatures with power 4+ (or effects that grant it) — and prioritize hitting that count over just adding more raw power, since a curve top-heavy with 6-drop 4/4s can't turn Ferocious on early enough to matter.</div>
+          </div>
+        </div>
+
+        <div class="archetype-card">
+          <div class="archetype-head" style="background:linear-gradient(90deg,#8c3b2e,#e2d2a6); color:#241f17;">
+            <span class="pair" style="color:#241f17;">Red / White — Dwarves &amp; Storied <span class="pips"><span class="pip pip-r">R</span><span class="pip pip-w">W</span></span></span>
+            <span class="tag" style="border-color:rgba(0,0,0,.35);">mid-range, not aggro</span>
+          </div>
+          <div class="archetype-body">
+            <p>Normally the format's aggro slot — not this time. Creatures are somewhat understatted on their own and equipment costs extra mana to equip, pushing this into mid-range territory instead.</p>
+            <p><strong>Don't overbuild around Storied</strong> — it's a fine bonus (often just Ward 1) but not worth forcing weak cards into your deck. The real Storied payoffs live at rare/mythic.</p>
+            <p class="key-cards-label">Key cards:</p>
+            <ul class="key-cards">
+              <li><span class="cardlink" data-card="thorin">Thorin Oakenshield</span> — 3/2 trample for 2 that hands out Ward once Storied</li>
+              <li><span class="cardlink" data-card="biffer">Bifur, Melodic Rider</span> — doubles your Dwarves' triggered abilities once Storied</li>
+              <li><span class="cardlink" data-card="dori">Dori, Bearer of Friends</span> — 3/2 trample for 3 with a free Treasure — also a common that alone gets you a third of the way to Storied</li>
+              <li><span class="cardlink" data-card="kili">Kíli the Resourceful</span> — draws off every Dwarf/Equipment ETB, frees your first equip a turn</li>
+              <li><span class="cardlink" data-card="dainironfoot">Dáin Ironfoot</span> — makes and auto-attaches a free Equipment on ETB, then grants double strike to every equipped attacker — splashable in most decks that touch red</li>
+              <li><span class="cardlink" data-card="sidedoor">Key to the Side-Door</span> — cashes in a redundant legendary draw for two fresh cards, or grants unblockable to force through a suited-up threat; worth up to two copies</li>
+            </ul>
+            <div class="callout tip-callout"><strong>Archetype tip:</strong> Manage your legendary creature count while drafting and deckbuilding — avoid over-drafting copies of the same legendary so you're not stuck holding two in an opening hand. <span class="cardlink" data-card="ironhillsblacksmith">Iron Hills Blacksmith</span> and <span class="cardlink" data-card="dwarvenshortsword">Dwarven Shortsword</span> are worth prioritizing specifically as cheap "two pieces of cardboard for one card" equipment that also feeds your Storied count.</div>
+            <div class="callout"><strong>Build-around to watch for:</strong> <span class="cardlink" data-card="unexpectedparty">An Unexpected Party</span> — a 4-mana (2WW) enchantment that anthems one chosen creature type by +2/+2, with an Adventure sorcery side, At the Door (X2W), that makes X 2/2 red Dwarf tokens. Play At the Door first for a wave of Dwarves, then cast the enchantment naming Dwarf the turn after — those same tokens are suddenly 4/4s. Treat it as a genuine top-ten bomb, not just a build-around footnote.</div>
+            <div class="callout"><strong>On splashing:</strong> this pair is an exception to the guide's general "light splash is fine" advice (Chapter VIII). Its archetypes read as tight enough "on rails," and its own fixing artifacts smooth your own two colors more than they enable a third, that going past two colors here is rarely worth it.</div>
+          </div>
+        </div>
+
+        <div class="archetype-card">
+          <div class="archetype-head" style="background:linear-gradient(90deg,#2f6690,#e2d2a6); color:#241f17;">
+            <span class="pair" style="color:#241f17;">Blue / White — Humans &amp; Recruit <span class="pips"><span class="pip pip-u">U</span><span class="pip pip-w">W</span></span></span>
+            <span class="tag" style="border-color:rgba(0,0,0,.35);">control-leaning</span>
+          </div>
+          <div class="archetype-body">
+            <p>Cares about drawing a second card each turn, aided heavily by Recruit. It can play two different ways: as a controlling deck holding up mana and grinding out card advantage, or as a proactive go-wide deck that taps out for Recruit tokens and attacks instead. Which one you end up building probably depends on your specific pool — don't assume it has to be slow.</p>
+            <p class="key-cards-label">Key cards:</p>
+            <ul class="key-cards">
+              <li><span class="cardlink" data-card="bardbowman">Bard the Bowman</span> — reach blocker that gives lifelink off your 2nd card a turn</li>
+              <li><span class="cardlink" data-card="laketown">Lake-town Toymaker</span> — 3/4 that hands out +3/+0 and first strike once you've drawn two</li>
+              <li><span class="cardlink" data-card="patient">Patient Instructor</span> — a common that Recruits on a vigilant 2/2 body</li>
+              <li><span class="cardlink" data-card="gildedboat">Great Gilded Boat</span> — Recruits on every attack, the pair's core engine</li>
+              <li><span class="cardlink" data-card="esgarothgarrison">Esgaroth Garrison</span> — a */5 whose power equals your creature count, plus a Recruit trigger on ETB — gets bigger the wider you go</li>
+              <li><span class="cardlink" data-card="momentofglory">Moment of Glory</span> — a +1/+1 counter for W, or a team-wide +1/+1 with flashback if you're happy discarding it to Recruit first</li>
+            </ul>
+            <div class="callout tip-callout"><strong>Archetype tip:</strong> Look for cards with flashback or graveyard-recursion (like <span class="cardlink" data-card="eaglesrescue">Eagle's Rescue</span>) that you're happy to discard to Recruit — you get the token now and the spell later, without losing access to a card you wanted.</div>
+          </div>
+        </div>
+
+        <div class="archetype-card">
+          <div class="archetype-head" style="background:linear-gradient(90deg,#2f6690,#3e5c3a);">
+            <span class="pair">Blue / Green — Elves &amp; Landfall <span class="pips"><span class="pip pip-u">U</span><span class="pip pip-g">G</span></span></span>
+            <span class="tag">standard ramp shell</span>
+          </div>
+          <div class="archetype-body">
+            <p>The classic landfall pair, with an Elves tribal sub-theme. There aren't a ton of strong landfall payoffs at common, so — as with Storied — don't overload the theme; play good cards and treat landfall as a bonus.</p>
+            <p class="key-cards-label">Key cards:</p>
+            <ul class="key-cards">
+              <li><span class="cardlink" data-card="silvan">Silvan Reveler</span> — loots a land into play, then buys itself back off a later landfall</li>
+              <li><span class="cardlink" data-card="thranduil">Thranduil, Sindarin Liege</span> — Elf lord that mills for lands off its Adventure side first</li>
+              <li><span class="cardlink" data-card="mirkwood">Mirkwood Pathmaker</span> — a */* that just keeps growing with your land count</li>
+              <li><span class="cardlink" data-card="woodelves">Wood Elves</span> — tutors a Forest straight onto the battlefield on ETB, triggering landfall immediately — probably the pair's best ramp piece</li>
+              <li><span class="cardlink" data-card="beornreluctant">Beorn, Reluctant Host</span> — a real 5/5 trample for 5, with an Adventure side (Till and Tend) that's just an extra land drop — accelerant and payoff on the same card</li>
+              <li><span class="cardlink" data-card="thranduilcompany">Thranduil's Company</span> — <em>honorable mention:</em> a real 3/4 for 4 (2GU) that hands out an extra land drop with another Elf — but the landfall trigger itself fires off <em>any</em> land you play, Elf or no, so it's a fine include even outside a dedicated Elves shell</li>
+            </ul>
+            <div class="callout"><strong>Archetype tip:</strong> Holding lands to set up big landfall turns is fine — but if you draw a card-draw spell while sitting on lands, you may draw playables you can't afford to cast. Balance how much draw is left in your deck against how many landfall payoffs you're holding for.</div>
+            <div class="callout tip-callout"><strong>Splash base:</strong> this pair's land-search effects can fetch off-color duals, which makes it the easiest base in the format to splash a third color from — for example, fixing into <span class="cardlink" data-card="thranduilelvenking">Thranduil, the Elvenking</span> (a Sultai/BUG 5/6 that inherits every Elf ability in your graveyard) off a green-black dual.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- IV. COMMONS -->
+      <section class="section" id="sec-commons">
+        <h2 class="chapter"><span class="roman">IV.</span> Common Wisdom</h2>
+        <div class="chapter-rule"></div>
+        <p>The best common in each color — hover any name for the full text. These are the commons that consistently overperform their rarity, so treat them as safe picks rather than gambles.</p>
+
+        <h3 class="sub">White</h3>
+        <div class="grid tight">
+          <div class="chip" style="--chip-color:#cbb872;"><span class="name"><span class="cardlink" data-card="butterflies">Velvetwing Butterflies</span></span><span class="role">2/2 flyer for 3, Adventure side taps down a blocker first — two cards in one</span></div>
+          <div class="chip" style="--chip-color:#cbb872;"><span class="name"><span class="cardlink" data-card="magend">Magnificent End</span></span><span class="role">5 damage for 5, only 2 if the target's already tapped</span></div>
+          <div class="chip" style="--chip-color:#cbb872;"><span class="name"><span class="cardlink" data-card="provisioner">Dwarven Provisioner</span></span><span class="role">a fine 2/2 for 2 that becomes a team-pump button later</span></div>
+          <div class="chip" style="--chip-color:#cbb872;"><span class="name"><span class="cardlink" data-card="laketownlookout">Lake-town Lookout</span></span><span class="role">1-mana 1/1 that still Recruits when it dies</span></div>
+        </div>
+
+        <h3 class="sub">Blue</h3>
+        <div class="grid tight">
+          <div class="chip" style="--chip-color:#2f6690;"><span class="name"><span class="cardlink" data-card="bilbo">Bilbo Baggins, Burglar</span></span><span class="role">2/1 for 3, draws on ETB, plus a cantrip Adventure side</span></div>
+          <div class="chip" style="--chip-color:#2f6690;"><span class="name"><span class="cardlink" data-card="uneasy">Uneasy Partings</span></span><span class="role">tucks a creature top or bottom of library, as cheap as 2 mana on an attacker</span></div>
+          <div class="chip" style="--chip-color:#2f6690;"><span class="name"><span class="cardlink" data-card="plunder">Plunder the Trollshaws</span></span><span class="role">a cantrip now, or two cards later from the graveyard</span></div>
+          <div class="chip" style="--chip-color:#2f6690;"><span class="name"><span class="cardlink" data-card="enchantedriver">Enchanted River's Grasp</span></span><span class="role">taps a creature down, strips its counters, and it never untaps</span></div>
+          <div class="chip" style="--chip-color:#2f6690;"><span class="name"><span class="cardlink" data-card="longlakenuisance">Long Lake Nuisance</span></span><span class="role">3/1 flyer that Recruits on ETB — evasive value on a stick</span></div>
+        </div>
+
+        <h3 class="sub">Black</h3>
+        <div class="grid tight">
+          <div class="chip" style="--chip-color:#3a2a3a;"><span class="name"><span class="cardlink" data-card="deadlyslice">Bilbo's Deadly Slice</span></span><span class="role">unconditional Doom Blade for 3 — as clean as removal gets at common</span></div>
+          <div class="chip" style="--chip-color:#3a2a3a;"><span class="name"><span class="cardlink" data-card="ragevalley">Rage into the Valley</span></span><span class="role">a card and an Army counter for 3 mana and 1 life</span></div>
+          <div class="chip" style="--chip-color:#3a2a3a;"><span class="name"><span class="cardlink" data-card="stirtrouble">Stir Up Trouble</span></span><span class="role">Terror for B with a body to spare, or 4 mana without one</span></div>
+          <div class="chip" style="--chip-color:#3a2a3a;"><span class="name"><span class="cardlink" data-card="stonyvoiced">Stony-Voiced Goblins</span></span><span class="role">1/1 for 2 that strips a card from their hand on ETB</span></div>
+          <div class="chip" style="--chip-color:#3a2a3a;"><span class="name"><span class="cardlink" data-card="frontporch">Front Porch Sentries</span></span><span class="role">a 2/2 for 2 that's genuinely happy to be sacrificed — its death trigger shrinks an opposing creature</span></div>
+        </div>
+
+        <h3 class="sub">Red</h3>
+        <div class="grid tight">
+          <div class="chip" style="--chip-color:#8c3b2e;"><span class="name"><span class="cardlink" data-card="pinecone">Pinecone Strike</span></span><span class="role">3 damage with exile attached, or pops an artifact token</span></div>
+          <div class="chip" style="--chip-color:#8c3b2e;"><span class="name"><span class="cardlink" data-card="gundabad">Gundabad Opportunist</span></span><span class="role">4/2 for 4 with a free impulse-draw attached</span></div>
+          <div class="chip" style="--chip-color:#8c3b2e;"><span class="name"><span class="cardlink" data-card="flunkies">Goblin-town Flunkies</span></span><span class="role">hasty 1/1 that starts your Army a turn early</span></div>
+          <div class="chip" style="--chip-color:#8c3b2e;"><span class="name"><span class="cardlink" data-card="smaugcalamity">Smaug, the Great Calamity</span></span><span class="role">a 5/5 flier for 7 with a 5-damage removal spell stapled on as its Adventure side — an unusually strong rate for a common, let alone a legendary one</span></div>
+        </div>
+
+        <h3 class="sub">Green</h3>
+        <div class="grid tight">
+          <div class="chip" style="--chip-color:#3e5c3a;"><span class="name"><span class="cardlink" data-card="squirrel">Quarrel</span></span><span class="role">free-roll fight — your creature deals its power, takes none back</span></div>
+          <div class="chip" style="--chip-color:#3e5c3a;"><span class="name"><span class="cardlink" data-card="guardian">Guardian of the Halls</span></span><span class="role">2/2 trample for 2 that becomes a real threat once mana is free late</span></div>
+          <div class="chip" style="--chip-color:#3e5c3a;"><span class="name"><span class="cardlink" data-card="bowside">Boughside Wanderers</span></span><span class="role">digs 4 deep for a permanent on ETB, keeps growing off landfall — solid, if not quite as exciting as some other ETB commons</span></div>
+          <div class="chip" style="--chip-color:#3e5c3a;"><span class="name"><span class="cardlink" data-card="attercop">Attercop</span></span><span class="role">2/1 for 2 with reach and deathtouch, grows off landfall — trades with nearly anything and can attack too</span></div>
+          <div class="chip" style="--chip-color:#3e5c3a;"><span class="name"><span class="cardlink" data-card="mirkwoodnurturer">Mirkwood Nurturer</span></span><span class="role">3/2 for 3 that bounces one of your own permanents and grows — flexible ETB-rebuy or landfall re-trigger</span></div>
+        </div>
+        <p style="margin-top:10px; font-size:.9rem; color:var(--ink-soft);"><span class="cardlink" data-card="laketownlookout">Lake-town Lookout</span> above is more a filler pick than a standout — it's mainly notable for lacking a Black/White sac archetype to punish its death trigger, not for being independently strong. <span class="cardlink" data-card="longlakenuisance">Long Lake Nuisance</span> is a 3/1 — watch out for the set's 1-damage sweeper effects picking it off for free. One to actively skip: <span class="cardlink" data-card="longbodiedgreydog">Long-Bodied Grey Dog</span>, a colorless 2/2 flash reach that makes a Treasure on ETB — reach doesn't matter much with so little flying in the set, so it mostly reads as filler without a real home.</p>
+      </section>
+
+      <!-- V. TRICKS & INTERACTION -->
+      <section class="section" id="sec-tricks">
+        <h2 class="chapter"><span class="roman">V.</span> Tricks &amp; Wards</h2>
+        <div class="chapter-rule"></div>
+
+        <h3 class="sub">Counterspells (only three in the set)</h3>
+        <div class="table-scroll">
+        <table class="tricks">
+          <tr><th>Card</th><th>Effect</th><th>Notes</th></tr>
+          <tr><td><span class="cardlink" data-card="confiscate">Confusticate and Bebother</span></td><td>Counter unless they pay 4, or draw 2/discard 1</td><td>The set's only common counterspell — flexible, use as filtering if you don't need the counter.</td></tr>
+          <tr><td><span class="cardlink" data-card="soundtrumpets">Sound the Trumpets</span></td><td>Hard counter for 2, Recruit if the spell costs 2 or less</td><td>Efficient rate with upside.</td></tr>
+          <tr><td><span class="cardlink" data-card="thranddecree">Thranduil's Decree</span></td><td>6-mana hard counter; exile + free cast if a permanent</td><td>Watch for opponents holding 6 mana and 1 card doing nothing.</td></tr>
+        </table>
+        </div>
+
+        <h3 class="sub">Combat Tricks (only ~8 total)</h3>
+        <div class="grid">
+          <div class="chip" style="--chip-color:#cbb872;"><span class="name"><span class="cardlink" data-card="vowarrow">Vow to Erebor</span></span><span class="role">untaps a blocker for a surprise +2/+2 mid-combat</span></div>
+          <div class="chip" style="--chip-color:#cbb872;"><span class="name"><span class="cardlink" data-card="thorenlaststand">Thorin's Last Stand</span></span><span class="role">team pump, or a 2-life Naturalize — never dead</span></div>
+          <div class="chip" style="--chip-color:#cbb872;"><span class="name"><span class="cardlink" data-card="stonesunlight">Stone by Sunlight</span></span><span class="role">kills anything power 4+ for 2, or saves your own creature instead — purpose-built to answer Black/Green's whole Ferocious game plan, so hold it for that matchup specifically</span></div>
+          <div class="chip" style="--chip-color:#3a2a3a;"><span class="name"><span class="cardlink" data-card="reverendhowl">Reverent Howl</span></span><span class="role">draw 2 for 2 life, or +2/+2 and lifelink in combat</span></div>
+          <div class="chip" style="--chip-color:#8c3b2e;"><span class="name"><span class="cardlink" data-card="smogfury">Smaug's Fury</span></span><span class="role">+3/+0, reach, first strike for 1 mana — wins most combats outright</span></div>
+          <div class="chip" style="--chip-color:#3e5c3a;"><span class="name"><span class="cardlink" data-card="wargtactics">Warg Tactics</span></span><span class="role">kills a flier outright, or trample + hexproof on your attacker</span></div>
+        </div>
+        <div class="callout"><strong>Watch out:</strong> Expect <span class="cardlink" data-card="vowarrow">Vow to Erebor</span> constantly at prerelease — it untaps a blocker mid-combat and blows out attacks that don't play around it.</div>
+
+        <h3 class="sub">Board Wipes (none are unconditional — good news)</h3>
+        <p>The scariest is <span class="cardlink" data-card="settlewreckage">Settle the Wreckage</span> — exiles all attacking creatures. Once known, be cautious about alpha-striking into an opponent holding 4+ mana with no visible reason to hold back. Past that, everything else is a "mini sweeper" that only dents the board rather than clearing it: <span class="cardlink" data-card="desolationsmaug">Desolation of Smaug</span> (a 4-mana rare dealing 3 to every non-Dragon creature, plus a burst of mana for Dragon spells), <span class="cardlink" data-card="gnashingteeth">Gnashing of Teeth</span> (a one-sided -1/-1 to all your opponent's creatures as its second mode), and the Adventure side of <span class="cardlink" data-card="gloinmighty">Glóin the Mighty</span> (Easy Pickings, -1/-1 to all your opponent's creatures for 2R). Small, so-so against a board of anything with 3+ toughness, but real against a swarm of 1/1 tokens.</p>
+      </section>
+
+      <!-- VI. FIXING -->
+      <section class="section" id="sec-fixing">
+        <h2 class="chapter"><span class="roman">VI.</span> Waymarks — Mana Fixing</h2>
+        <div class="chapter-rule"></div>
+        <div class="grid">
+          <div class="chip" style="--chip-color:#9c7a2e;"><span class="name">Dual Lands</span><span class="role">~50% of packs — e.g. <span class="cardlink" data-card="elvenkingshalls">Elvenking's Halls</span> (Blue/Green)</span></div>
+          <div class="chip" style="--chip-color:#9c7a2e;"><span class="name"><span class="cardlink" data-card="hobbithole">Hobbit Hole</span></span><span class="role">sac for a basic now, or discard for 4 to tutor a Halfling later</span></div>
+          <div class="chip" style="--chip-color:#9c7a2e;"><span class="name"><span class="cardlink" data-card="giantsboulder">Giant's Boulder</span></span><span class="role">Scry 2 on ETB, then a mana rock, then a 7-mana removal spell late</span></div>
+          <div class="chip" style="--chip-color:#9c7a2e;"><span class="name"><span class="cardlink" data-card="oldthrush">Old Thrush</span></span><span class="role">gains 2 life and tops your library with a land — smooths the next draw</span></div>
+          <div class="chip" style="--chip-color:#9c7a2e;"><span class="name"><span class="cardlink" data-card="throrsmap">Thrór's Map</span></span><span class="role">finds a land to hand immediately, then loots every turn after — a fine 22nd/23rd card, not a high pick</span></div>
+          <div class="chip" style="--chip-color:#9c7a2e;"><span class="name"><span class="cardlink" data-card="troopponies">Troop of Ponies</span></span><span class="role">a real 2/1 first, a double land-fetch later — never dead, but also a low-priority late pick</span></div>
+        </div>
+        <p>Dual lands enter tapped for either color of their pair, and can later be sacrificed for 4 mana to add counters to a relevant creature type — good in two-color decks and light splashes alike. That counter-payoff mode matters more the faster your deck is: turning a combat-relevant creature from, say, 4/4 into 6/6 (sometimes with trample) on the spot is scarier in Red/White or Black/Green than in the format's slower pairs.</p>
+        <div class="callout tip-callout"><strong>Sequencing tip:</strong> against an aggressive opponent, playing a 2-mana fixing artifact like Thrór's Map on curve turn 2 can cost you real tempo — consider holding it and deploying it turn 4-5 instead, once the board state calls for it less urgently.</div>
+      </section>
+
+      <!-- VII. RARES -->
+      <section class="section" id="sec-rares">
+        <h2 class="chapter"><span class="roman">VII.</span> The Hoard — Rares &amp; Mythics</h2>
+        <div class="chapter-rule"></div>
+
+        <div class="tierlist tier-bombs">
+          <div class="tier-head">Tier 1 — Bombs</div>
+          <div class="tier-box">
+            <div class="grid">
+              <div class="chip" style="--chip-color:#2f6690;"><span class="name"><span class="cardlink" data-card="gildedboat">Great Gilded Boat</span></span><span class="role">4/4 Vehicle, crew 2, Recruits on every attack — a repeatable engine that dodges sorcery-speed removal</span></div>
+              <div class="chip" style="--chip-color:#8c3b2e;"><span class="name"><span class="cardlink" data-card="smaug">Smaug the Magnificent</span></span><span class="role">flying haste, makes a Treasure every upkeep and hits for that many on attack — snowballs into a fast clock</span></div>
+              <div class="chip" style="--chip-color:#cbb872;"><span class="name"><span class="cardlink" data-card="philli">Fíli the Pathfinder</span></span><span class="role">every Dwarf ETB makes a free 2/2, unconditionally — Storied only adds a team-wide +1/+1 on top, so the floor alone is already good</span></div>
+              <div class="chip" style="--chip-color:#3e5c3a;"><span class="name"><span class="cardlink" data-card="golemriddle">Gollum, Riddle Master</span></span><span class="role">2 mana, punishes every spell of the chosen parity your opponent casts — snowballs fast if unanswered</span></div>
+              <div class="chip" style="--chip-color:#cbb872;"><span class="name"><span class="cardlink" data-card="headhunt">Head of the Hunt</span></span><span class="role">flash 4/3 that turns every opposing creature death into your own 2/2 — a real blowout on defense</span></div>
+              <div class="chip" style="--chip-color:#6e655a;"><span class="name"><span class="cardlink" data-card="stonegiant">Stone-Giant of High Pass</span></span><span class="role">7/7 that makes a wall on ETB and every attack, plus a repeatable 4-damage sac outlet — an army by itself</span></div>
+              <div class="chip" style="--chip-color:#3e5c3a;"><span class="name"><span class="cardlink" data-card="bejorn">Beorn the Fierce</span></span><span class="role">6/6 trample that also anthems other Bears +2/+2, permanently turns a creature into a Bear each combat, and draws two once you have three — a genuine finisher</span></div>
+              <div class="chip" style="--chip-color:#2f6690;"><span class="name"><span class="cardlink" data-card="bardscompany">Bard's Company</span></span><span class="role">flash with a Human in play, anthem plus Recruit on ETB and attack — snowballs the token plan hard</span></div>
+              <div class="chip" style="--chip-color:#3a2a3a;"><span class="name"><span class="cardlink" data-card="chiefwargco">Chief Warg's Company</span></span><span class="role">a free 2/2 Wolf every upkeep once online, though it can't attack itself until you control two other Wolves — cheap enough that early removal isn't a disaster</span></div>
+              <div class="chip" style="--chip-color:#6e655a;"><span class="name"><span class="cardlink" data-card="tomberwilliam">Tom, Bert, and William</span></span><span class="role">turns any creature into cards, then returns once as an artifact after dying — resilient value engine</span></div>
+              <div class="chip" style="--chip-color:#cbb872;"><span class="name"><span class="cardlink" data-card="arkenstone">The Arkenstone</span></span><span class="role">colorless to cast — the anthem plus a card every turn works in any deck, with an Adventure side that tutors a legendary first as pure upside</span></div>
+              <div class="chip" style="--chip-color:#8c3b2e;"><span class="name"><span class="cardlink" data-card="kili">Kíli the Resourceful</span></span><span class="role">draws off every Dwarf or Equipment ETB and frees your first equip each turn — the Red/White engine piece</span></div>
+              <div class="chip" style="--chip-color:#8c3b2e;"><span class="name"><span class="cardlink" data-card="mistymountainscold">The Misty Mountains Cold</span></span><span class="role">3-mana (2R) Saga, four identical chapters — make a Treasure, then sac for a 6/6 flying Dragon once you've got four — a real mana rebate for a huge body</span></div>
+              <div class="chip" style="--chip-color:#cbb872;"><span class="name"><span class="cardlink" data-card="dainironfoot">Dáin Ironfoot</span></span><span class="role">makes and auto-attaches a free Equipment on ETB, then grants double strike to every equipped attacker — splashable in most red decks</span></div>
+              <div class="chip" style="--chip-color:#3a2a3a;"><span class="name"><span class="cardlink" data-card="rhovanion">Rhovanion Rampager</span></span><span class="role">a two-for-one no matter which half you use — sac a creature on attack for counters, or Amass for its full power when it dies</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tierlist tier-two">
+          <div class="tier-head">Tier 2 — Good, but a build-around</div>
+          <div class="tier-box">
+            <p><span class="cardlink" data-card="eaglescoming">The Eagles Are Coming!</span> — best case too narrow to bank on; fine baseline otherwise.</p>
+            <p><span class="cardlink" data-card="thranduilcompany">Thranduil's Company</span> — awkward off-curve if you're not drawing lands on schedule.</p>
+            <p><span class="cardlink" data-card="thorinmountain">Thorin, Mountain-king</span> — ETB attaches any number of your Equipment to a creature and pings something equal to its power the first time gear attaches this way; strong once you have any Equipment down, but too build-around to first-pick blind.</p>
+            <p><span class="cardlink" data-card="bardking">Bard, King of Dale</span> — understatted unless you have other ways to draw 2+ cards a turn.</p>
+            <p><span class="cardlink" data-card="dwalin">Dwalin, Weaponmaster</span> — excellent turn 2, poor top-deck; needs equipment already down.</p>
+            <p><span class="cardlink" data-card="greatgoblin">The Great Goblin</span> — good, but telegraphed; opponents kill it before your other goblins.</p>
+            <p><span class="cardlink" data-card="dainscompany">Dáin's Company</span> — a 2/2 for RW with lifelink alongside another Dwarf and a card-selection ETB; a fine role-player just short of bomb status.</p>
+            <p><span class="cardlink" data-card="smaugwickedworm">Smaug, Wicked Worm</span> — a second, distinct Smaug: 5/5 flyer that makes Treasures scaled to your opponents' artifact count and rewards spending them. Good in artifact-heavy mirrors, weaker against decks with none.</p>
+            <p><span class="cardlink" data-card="gandalfgoblinsbane">Gandalf, Goblins' Bane</span> — a 2/3 for 2R that grows and pings every opponent for 1 on each noncreature spell you cast. The Adventure side only pays off once you already have a Wizard in play (there are only a handful in the set), so it's a slower, more build-around bomb than its rate suggests.</p>
+            <p><span class="cardlink" data-card="dancingdarkdawn">Dancing from Dark to Dawn</span> — mythic enchantment that turns every creature you cast into a counter-pile on something else, plus Landfall Bears. Real ceiling, but a genuine dead turn the turn it resolves — treat it as a build-around, not an auto-include.</p>
+            <p><span class="cardlink" data-card="insideinfo">Inside Information</span> — mythic X-spell that exiles and lets you play the top X of an opponent's library, paying life instead of mana. Explosive when it connects, but you have to make your own land drop first and hand the opponent information before they can respond — weigh that cost carefully against the upside before playing it.</p>
+            <p><span class="cardlink" data-card="thranduilelvenking">Thranduil, the Elvenking</span> — a 3-color (BUG) 5/6 that inherits every activated ability on Elves in your graveyard and draws cards off other legendary Elves entering. Needs real fixing to cast, but a genuine payoff if you're already splashing off Blue/Green's duals.</p>
+            <p><span class="cardlink" data-card="dainlordiron">Dáin, Lord of the Iron Hills</span> — a 2/2 for W with vigilance whose Storied mode taxes every attacker against you by 1. A real annoyance once online, but fragile as just a 2/2 in the meantime.</p>
+          </div>
+        </div>
+
+        <div class="tierlist tier-trap">
+          <div class="tier-head">Trap Rares — Avoid</div>
+          <div class="tier-box">
+            <div class="grid tight">
+              <div class="chip" style="--chip-color:#6b2027;"><span class="name"><span class="cardlink" data-card="belladonna">Belladonna Took</span></span><span class="role">only pays off on a token's 2nd/3rd trigger that turn — most games it's just a 2/2 for 2</span></div>
+              <div class="chip" style="--chip-color:#6b2027;"><span class="name"><span class="cardlink" data-card="rollroll">Roll-Roll-Roll-Roll</span></span><span class="role">a flicker shell this format doesn't support at common — no strong ETBs to reset means it just fizzles</span></div>
+              <div class="chip" style="--chip-color:#6b2027;"><span class="name"><span class="cardlink" data-card="moonletters">Uncover the Moon-Letters</span></span><span class="role">powerful, but a full turn spent doing nothing to the board — too slow for this format's pace</span></div>
+              <div class="chip" style="--chip-color:#6b2027;"><span class="name"><span class="cardlink" data-card="getawaybarrel">Getaway Barrel</span></span><span class="role">does nothing when it enters, then hands you a random creature with zero choice</span></div>
+              <div class="chip" style="--chip-color:#6b2027;"><span class="name"><span class="cardlink" data-card="giganticbear">Gigantic Big Bear</span></span><span class="role">huge and hasty, but no trample — gets chump-blocked by any 1/1 forever</span></div>
+              <div class="chip" style="--chip-color:#6b2027;"><span class="name"><span class="cardlink" data-card="myprecious">My Precious</span></span><span class="role">hexproof and unblockable, but +0/+0 — protects a threat, doesn't create one. Its Adventure side, Allure of Power (sac a creature, draw two), is the actually-playable half in a Black/Red sac deck</span></div>
+              <div class="chip" style="--chip-color:#6b2027;"><span class="name"><span class="cardlink" data-card="orcrist">Orcrist, Goblin-cleaver</span></span><span class="role">a real payoff, but 3 to cast and 3 to equip before it does anything — too slow to reliably assemble</span></div>
+              <div class="chip" style="--chip-color:#6b2027;"><span class="name"><span class="cardlink" data-card="stingbilbo">Sting, Bilbo's Sword</span></span><span class="role">scales off the opponent's board, which they control — often blank exactly when you need it live</span></div>
+              <div class="chip" style="--chip-color:#6b2027;"><span class="name"><span class="cardlink" data-card="lastlightdurin">Last Light of Durin's Day</span></span><span class="role">needs six of your own Mountains to enter before it does anything at all — even in mono-red, that's too slow to matter</span></div>
+            </div>
+            <p style="margin-top:10px;">The through-line: several of these ask you to take an entire turn off to set up value. In a medium-speed format, that's usually a losing proposition.</p>
+          </div>
+        </div>
+
+        <div class="tierlist tier-myth">
+          <div class="tier-head">Best Mythic Uncommons — Sagas</div>
+          <div class="tier-box">
+            <p><span class="cardlink" data-card="mountainking">The Mountain-king's Return</span> — Recruit, recur a small creature, and place a counter, all for 3 mana. Enormous value for the cost.</p>
+            <p><span class="cardlink" data-card="oldfatspider">Old Fat Spider Can't See Me</span> — draw 2 plus multi-turn protection for 3 mana. A safe, high-value first pick.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIII. TIPS -->
+      <section class="section" id="sec-tips">
+        <h2 class="chapter"><span class="roman">VIII.</span> Field Notes for Prerelease</h2>
+        <div class="chapter-rule"></div>
+        <ol class="protips">
+          <li><strong>Run at least six removal spells.</strong> With 6 packs plus a guaranteed foil rare per player, you'll face a minimum of 7 rares across the table — and individual Play Boosters can contain 2-3 rares each, so the realistic number you'll see is often higher. (Wizards' own baseline guidance is lighter — 4-5 removal spells against 13-15 creatures in a 23-spell/17-land 40-card deck — but veteran drafters here consistently recommend leaning heavier on removal than that official floor.)</li>
+          <li><strong>Combat tricks and bounce spells count as removal</strong> if you're light on true removal — a bounce-to-library effect costs the opponent a redraw.</li>
+          <li><strong>Don't be afraid to splash</strong> a single pip of a removal spell in a third color — just avoid double-pip splashes. That said, this set rewards splashing less than most: the archetypes are tight enough, and most fixing smooths your own two colors rather than truly enabling a third, that strict two-color is simply better here more often than usual.</li>
+          <li><strong>Stick to two colors</strong> with at most a light splash, rather than three colors outright, to reduce mulligans and awkward hands.</li>
+          <li><strong>You don't need many two-drops.</strong> Four or five is plenty in this mid-range format — include 1-2 card-draw effects instead, since there aren't many late-game mana sinks to fall back on.</li>
+          <li><strong>Don't force synergy.</strong> Play good cards first and let Storied, Landfall, Ferocious, and Amass be bonuses — except for the specific build-around bombs called out above.</li>
+          <li><strong>Watch for "do-nothing" trap turns.</strong> Several rares ask you to skip a turn to set up value — risky in this format's tempo, and worth noticing if an opponent does it too.</li>
+          <li><strong>Expect the aggro/mid-range roles to be swapped:</strong> Red/White plays mid-range this time, and Black/Green is the format's real aggro deck.</li>
+          <li><strong>The "threat test":</strong> when sorting a fresh pool, ask how you'd feel if each rare/mythic were played against <em>you</em>. If the answer is "scared," you've found a real threat — a quick, honest way to spot which color(s) your pool actually wants to be in.</li>
+          <li><strong>Your promo card counts.</strong> The traditional foil promo in your prerelease kit is part of your legal sealed pool — play it if it's strong, same as any other card.</li>
+        </ol>
+        <div class="callout tip-callout"><strong>Prerelease etiquette:</strong> turn your cards to face your opponent so they can read them, don't sweat early-round takebacks, call a judge if a ruling confuses the table, and don't worry if your card recognition isn't perfect on release weekend — nobody's is. It's meant to be a casual, friendly event, not a competitive one.</div>
+      </section>
+
+      <!-- IX. A SECOND READ -->
+      <section class="section" id="sec-second">
+        <h2 class="chapter"><span class="roman">IX.</span> A Second Read</h2>
+        <div class="chapter-rule"></div>
+        <p class="lede">A second pass over the same card pool covered in Chapters III–VIII. Where it lines up with the rest of the guide, that's folded in as a stronger signal on those calls. Where it disagrees, both readings are laid out below so you can judge for yourself rather than take either one on faith.</p>
+
+        <h3 class="sub">Where the Case Is Genuinely Split</h3>
+        <p>Most cards check out cleanly one way or the other. These five don't — the case for and against each is close enough that reasonable drafters land in different places:</p>
+        <div class="callout"><strong><span class="cardlink" data-card="belladonna">Belladonna Took</span></strong> — Chapter VII's Trap Rares list is skeptical: she only really pays off on a token's 2nd/3rd trigger that turn, so most games she's just a 2/2 for 2. There's a more favorable read, though: in a White deck that's already generating tokens as its game plan (which is most of them), those extra triggers show up more often than the trap label suggests, and she's worth a much longer look than a flat "avoid." There's also a harsher read than Chapter VII's own: without a specifically synergistic pool, she may never actually draw you a card at all. Treat her as a genuine toss-up rather than a settled call — her value swings entirely on how many token-makers are actually in your deck.</div>
+        <div class="callout"><strong><span class="cardlink" data-card="eaglescoming">The Eagles Are Coming!</span></strong> — Chapter VII calls this a build-around with too narrow a best case to bank on, and there's a real case for that: "only useful to protect your own stuff" has historically been a weak pattern for flicker-style cards. But there's also a strong case that this is one of the set's biggest bombs outright, not just a fringe playable: kicked for three-plus creatures, it turns your whole board into 4/4 flying tokens next upkeep, a real one-card blowout either offensively (bounce your team, swing back with an air force) or defensively (block first, then rebuild bigger). Worth a real bump if your deck already runs a lot of creatures — but genuinely contested, not a settled call either way.</div>
+        <div class="callout"><strong><span class="cardlink" data-card="giganticbear">Gigantic Big Bear</span></strong> — an unanswerable finisher on paper: hexproof, haste, can't be countered, hitting for half an opponent's life total out of nowhere. That's all true, but Chapter VII's caveat matters more than it first appears — with no trample, a single 1/1 can chump-block it forever, and some call that outright fatal: your opponent can just keep making one-one tokens and block this for eternity. It's a house when unblocked and a non-event when it isn't.</div>
+        <div class="callout"><strong><span class="cardlink" data-card="mistymountainscold">The Misty Mountains Cold</span></strong> — Chapter VII files this in Tier 1 as a straightforward mana rebate for a 6/6 flier. A more cautious read treats it as Tier 2 at best: without a way to make Treasures independent of the Saga itself, you need favorable draw order to actually chain into a second or third Dragon, and the first one alone takes four turns to arrive.</div>
+        <div class="callout"><strong><span class="cardlink" data-card="thorinmountain">Thorin, Mountain-king</span></strong> — Chapter VII keeps him in Tier 2, wary of needing Equipment already in play. There's a much higher read on him, though: with Equipment density as high as it is in Red decks generally, "one equipment anywhere on board" is a low bar to clear for a free kill-on-ETB plus a scary trampler — arguably a top-10 bomb outright.</div>
+        <div class="callout"><strong><span class="cardlink" data-card="thranduilcompany">Thranduil's Company</span></strong> — Chapter VII calls this "awkward off-curve" (Tier 2). There's a strong case it deserves better: it's worth splashing as a plain 5-drop 3/4 even with zero Elf synergy in the deck — the "awkward" read may be undervaluing its floor.</div>
+
+        <h3 class="sub">Is Red/White Actually Mid-range?</h3>
+        <div class="callout">Chapters I and III both call Red/White the exception to this set's usual aggro slot — a mid-range deck built around Storied rather than a straightforward beatdown. Not everyone reads it that way: one source argues Storied basically happens on its own as a byproduct of curving out normally, and that a Red/White pool should be played just as aggressively as the format's other fast decks, treating the enduring-story payoff as a bonus rather than a reason to slow down. Both reads agree on the actual deckbuilding advice (curve out, play good cards, don't force Storied) — they only disagree on how hard to lean into attacking once you've done that. If your pool clearly wants to race, don't let "this set's Red/White is slower" talk you out of it.</div>
+
+        <h3 class="sub">More Uncommons Worth Watching</h3>
+        <p>Repeat call-outs from Chapter VII's Tier 1/Tier 2 and Chapter V's tricks — <span class="cardlink" data-card="mountainking">The Mountain-king's Return</span>, <span class="cardlink" data-card="stonesunlight">Stone by Sunlight</span>, <span class="cardlink" data-card="oldfatspider">Old Fat Spider Can't See Me</span>, <span class="cardlink" data-card="soundtrumpets">Sound the Trumpets</span>, <span class="cardlink" data-card="mistyraider">Misty Mountains Raider</span>, and <span class="cardlink" data-card="prowler">Desolation Prowler</span> — all hold up on a second look, which is a good sign they're genuinely strong rather than one narrow pet pick. New names worth adding to the watch list:</p>
+        <div class="grid tight">
+          <div class="chip" style="--chip-color:#cbb872;"><span class="name"><span class="cardlink" data-card="celebmountainking">Celebrate the Mountain-king</span></span><span class="role">a 4-mana Banishing Light that also Recruits — two-for-one removal</span></div>
+          <div class="chip" style="--chip-color:#3a2a3a;"><span class="name"><span class="cardlink" data-card="gatheringdarkness">Gathering of Darkness</span></span><span class="role">returns a creature to hand and grows your Army by 3 — pure value into the amass plan</span></div>
+          <div class="chip" style="--chip-color:#3a2a3a;"><span class="name"><span class="cardlink" data-card="gnashingteeth">Gnashing of Teeth</span></span><span class="role">-5/-5 with exile for 3, or a one-sided -1/-1 wipe against tokens</span></div>
+          <div class="chip" style="--chip-color:#8c3b2e;"><span class="name"><span class="cardlink" data-card="burnburntreefern">Burn, Burn, Tree and Fern</span></span><span class="role">6 damage now, then two turns of free mana after — removal that becomes ramp</span></div>
+          <div class="chip" style="--chip-color:#8c3b2e;"><span class="name"><span class="cardlink" data-card="gandalfspark">Gandalf, Spark Starter</span></span><span class="role">3 damage split across up to 3 targets on ETB, on a 4/3 reach body — almost always a 2-for-1</span></div>
+          <div class="chip" style="--chip-color:#3e5c3a;"><span class="name"><span class="cardlink" data-card="beornhospitality">Beorn's Hospitality</span></span><span class="role">a +1/+1 counter every land drop, and can turn into a lands-matter finisher late</span></div>
+          <div class="chip" style="--chip-color:#3e5c3a;"><span class="name"><span class="cardlink" data-card="oldfatspidercreature">Old Fat Spider</span></span><span class="role">6/7 reach that can't be chump-blocked small, and draws a card off removal</span></div>
+          <div class="chip" style="--chip-color:#3a2a3a;"><span class="name"><span class="cardlink" data-card="goblintownsaga">Down, Down to Goblin-town</span></span><span class="role">2-mana Saga: hand disruption, then Amass, then a slow drain — quietly better than its rate suggests</span></div>
+          <div class="chip" style="--chip-color:#3e5c3a;"><span class="name"><span class="cardlink" data-card="largebear">Large Bear</span></span><span class="role">5/5 reach, trample, and haste for 5 (hybrid B/G) — a clean aggressive top-end body</span></div>
+          <div class="chip" style="--chip-color:#3e5c3a;"><span class="name"><span class="cardlink" data-card="weavemaster">Woodland Weavemaster</span></span><span class="role">grows off every Elf ETB, taps for mana scaled to its power — explosive if your Elf count is high enough</span></div>
+          <div class="chip" style="--chip-color:#8c3b2e;"><span class="name"><span class="cardlink" data-card="dwarvenmauler">Dwarven Mauler</span></span><span class="role">1-mana 2/1 that makes equip abilities targeting it cost 2 less — a snap-on carrier once you're running 4-5 pieces of gear</span></div>
+          <div class="chip" style="--chip-color:#3a2a3a;"><span class="name"><span class="cardlink" data-card="nighthowl">Nighthowl Pursuer</span></span><span class="role">1-mana 1/1 menace that's effectively a 3/3 on attack once Ferocious — curves brutally into Desolation Prowler</span></div>
+          <div class="chip" style="--chip-color:#cbb872;"><span class="name"><span class="cardlink" data-card="bofur">Bofur, Reliable Guardian</span></span><span class="role">1-mana lifelink body, or an Adventure instant granting hexproof + indestructible to protect an equipped threat</span></div>
+          <div class="chip" style="--chip-color:#2f6690;"><span class="name"><span class="cardlink" data-card="laketownmariners">Lake-town Mariners</span></span><span class="role">a 6/5 with ward 2 on its own; its Adventure flickers two of your own creatures/lands — re-trigger ETBs, dodge removal, or bank a second landfall</span></div>
+          <div class="chip" style="--chip-color:#2f6690;"><span class="name"><span class="cardlink" data-card="bilboluckwearer">Bilbo, Luckwearer</span></span><span class="role">an unblockable 1/1 that loots on combat damage; the synergies from an evasive looter matter more than his own body</span></div>
+        </div>
+
+        <h3 class="sub">Sleeper Picks — Artifacts</h3>
+        <p>Artifacts are quietly pushed a notch above their usual power level in this set, likely to compensate for having only five supported color pairs. <span class="cardlink" data-card="dwarvenmattock">Dwarven Mattock</span> auto-equips itself to a Dwarf you control for free, which is a real prize in Red/White given how much that pair already leans on equipment and Storied. <span class="cardlink" data-card="throrsmap">Thrór's Map</span> and <span class="cardlink" data-card="giantsboulder">Giant's Boulder</span> (both already covered in Chapter VI) round out the pattern: good to keep a sketchy hand early, good to filter extra lands late, splashable in any color. The pattern holds at common, too, in a color-neutral run of cheap equipment: <span class="cardlink" data-card="raggedshortspear">Ragged Short Spear</span> (loots on ETB), <span class="cardlink" data-card="crudebentblade">Crude Bent Blade</span> (an ETB edict), <span class="cardlink" data-card="dwarvenshortsword">Dwarven Shortsword</span> (makes and attaches its own Dwarf), and <span class="cardlink" data-card="goblinplatemail">Goblin Plate Mail</span> (Amasses and attaches itself) all read like they'd be uncommons in a normal set.</p>
+        <div class="callout"><strong>A related caveat on The Arkenstone:</strong> its own built-in card draw is often good enough that hard-casting it (or just playing a curve-filling 2-drop instead) beats detouring through its Adventure tutor — treat Seek the Heart as a bonus mode, not the reason to play the card.</div>
+
+        <h3 class="sub">Two-Color Signposts (no strong rare? first-pick these)</h3>
+        <p>When pack 1 pick 1 comes down to "no bomb, what's the safest signal to send," these three over-deliver on rate alone: <span class="cardlink" data-card="silvan">Silvan Reveler</span> (Blue/Green — discard a land and net a card, then do it again if it dies and comes back), <span class="cardlink" data-card="patient">Patient Instructor</span> (Blue/White, a common that still over-delivers at three mana), and <span class="cardlink" data-card="fearsomegoblinpair">Fearsome Goblin Pair</span> (Black/Red hybrid mana — five power worth of stats for three mana, plus sacrifice fodder).</p>
+
+        <h3 class="sub">Single-Color Power Ranking</h3>
+        <p>A different axis from Chapter III's archetype-pair ranking — this ranks the five colors in isolation, independent of which pair they end up drafted in.</p>
+        <ol class="protips">
+          <li><strong>Red</strong> — the deepest uncommon slot in the set plus the cheapest removal; edges out Black by a hair.</li>
+          <li><strong>Black</strong> — just as deep at common and uncommon, but its removal wants double black and doesn't splash as easily.</li>
+          <li><strong>Blue</strong> — very deep at common, noticeably thinner at uncommon; a solid floor without a high ceiling.</li>
+          <li><strong>Green</strong> — strong uncommons, but only one or two commons worth playing, and its fixing is unusually narrow this time (an Elf-only mana dork, a fetch that only finds Forests) — normally Green's job is helping you splash, and this set's version doesn't.</li>
+          <li><strong>White</strong> — the clear worst color this time, a reversal from its usual best-in-format spot in recent Standard-adjacent limited formats.</li>
+        </ol>
+        <div class="callout tip-callout"><strong>Reconciling with Chapter III:</strong> this isn't a contradiction of "Black/Green is the only real aggro deck" — a color can be individually powerful while its best archetype still plays as mid-range. Red and Black are both strong in isolation, but the pair they share leans sacrifice-value, not top-end speed.</div>
+        <div class="callout">Because Red, Black, and Blue are the three strongest colors in isolation, don't feel locked into only the five supported pairs above if your pool points elsewhere. Red/Blue and Blue/Black aren't official archetypes with their own payoffs, but both are "quite deep" on card quality alone, and a splash into the third of those three colors (Blue/Black/Red — the classic three-color "Grixis" shard) is worth keeping in mind if you end up light on a coherent two-color plan but heavy on good cards in those three.</div>
+
+        <h3 class="sub">Easiest to Pilot (a beginner-friendly axis)</h3>
+        <p>A third ranking, separate from both "best archetype" and "best color" above — this one's about how forgiving a pair is to actually play, useful if you're bringing a newer player to the table.</p>
+        <ol class="protips">
+          <li><strong>Black/Green (Ferocious)</strong> — easiest. Fewest moving parts: get a big creature down, turn Ferocious on, attack.</li>
+          <li><strong>Blue/White (Recruit)</strong> — straightforward card-advantage engine that mostly plays itself.</li>
+          <li><strong>Red/White (Storied)</strong> — "you almost can't lose it — it happens by accident" once you're holding a few Dwarves and artifacts.</li>
+          <li><strong>Black/Red (Amass)</strong> — reads confusing on the stack the first time, but clicks permanently after one game.</li>
+          <li><strong>Blue/Green (Landfall)</strong> — hardest. The most sequencing-dependent deck in the set: managing land drops, holding cards, and timing landfall triggers takes real practice.</li>
+        </ol>
+
+        <h3 class="sub">Table Math and Removal Density</h3>
+        <p>Two structural observations worth keeping in mind while building: first, on an 8-person pod you'll typically see roughly half of each printed rare, so 3-4 bombs concentrated in one color (not unusual — White in particular tends to cluster bombs in this set) can swing a whole draft on their own. Second, this format is unusually light on exile-based removal and true board wipes outside White's reprinted <span class="cardlink" data-card="settlewreckage">Settle the Wreckage</span> — which makes death-trigger and graveyard-value cards (<span class="cardlink" data-card="tomberwilliam">Tom, Bert, and William</span>, <span class="cardlink" data-card="rhovanion">Rhovanion Rampager</span>) safer includes than they'd be in a format with more exile effects. Between the removal gap and the density of anthem/token effects at uncommon and rare, going wide is rewarded more than usual this time.</p>
+        <div class="callout"><strong>On Settle the Wreckage specifically:</strong> it's easy to overrate from nostalgia for the original printing. In practice it often only catches one or two attackers (the rest of your board just gets exiled for the caster's benefit while your opponent fetches replacement lands), and a good opponent plays around it once it's known. Chapter V's caution about not alpha-striking into open White mana still holds — just don't expect it to be a bigger blowout than it usually is.</div>
+      </section>
+
+      <!-- X. CREDITS -->
+      <section class="section" id="sec-credits">
+        <h2 class="chapter"><span class="roman">X.</span> Credits</h2>
+        <div class="chapter-rule"></div>
+        <p class="lede">This guide is a compilation, not original analysis — every read, tier, and tip above was drawn from the prerelease coverage of the channels below. Go watch the full videos; this page can only ever be the highlights.</p>
+        <div class="grid">
+          <div class="chip" style="--chip-color:#9c7a2e;"><span class="name"><a href="https://www.youtube.com/@joelaremagic" target="_blank" rel="noopener">Joel are Magic</a></span><span class="role">general prerelease/sealed deckbuilding guide</span></div>
+          <div class="chip" style="--chip-color:#9c7a2e;"><span class="name"><a href="https://www.youtube.com/@limitedlevel-ups" target="_blank" rel="noopener">Limited Level-Ups</a></span><span class="role">archetypes, fixing, and top commons/uncommons/rares primers</span></div>
+          <div class="chip" style="--chip-color:#9c7a2e;"><span class="name"><a href="https://www.youtube.com/@LimitedLogicMTG" target="_blank" rel="noopener">Limited Logic MTG</a></span><span class="role">best commons/uncommons, bombs and trap rares, set overview</span></div>
+          <div class="chip" style="--chip-color:#9c7a2e;"><span class="name"><a href="https://www.youtube.com/@NizzahonMagic" target="_blank" rel="noopener">Nizzahon Magic</a></span><span class="role">biggest bombs breakdown</span></div>
+          <div class="chip" style="--chip-color:#9c7a2e;"><span class="name"><a href="https://www.youtube.com/c/NicolaiBolas" target="_blank" rel="noopener">NicolaiBolas</a></span><span class="role">biggest bombs breakdown</span></div>
+          <div class="chip" style="--chip-color:#9c7a2e;"><span class="name"><a href="https://www.youtube.com/@TolarianCommunityCollege" target="_blank" rel="noopener">Tolarian Community College</a></span><span class="role">prerelease guide and sealed pool walkthrough</span></div>
+        </div>
+        <div class="callout tip-callout">Chapter IX's "second read" disagreements and this guide's synthesized tiers all trace back to genuine differences of opinion across these channels — where this guide states a firm take, it's a distillation of theirs, not a replacement for watching them.</div>
+      </section>
+
+    </div>
+  </div>
+  <footer class="credit">Compiled from drafter commentary across several prerelease preview videos (see Chapter X for full credits) · not affiliated with Wizards of the Coast</footer>
+</div>
+
+<!-- floating real-card preview -->
+<div class="cardpop" id="cardpop">
+  <div class="cardpop-face">
+    <img id="cp-img" alt="" width="320" height="447">
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
