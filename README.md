@@ -1,6 +1,6 @@
 # The Hobbit — A Drafter's Field Guide 
 
-### 📖 [**Read the guide live: aribjornolafsson.github.io/hobbit-prerelease**](https://aribjornolafsson.github.io/hobbit-prerelease/)
+### 📖 [**Read the guide live: hobbit-prerelease.vercel.app**](https://hobbit-prerelease.vercel.app/)
 
 An unofficial drafter's guide to *The Hobbit* limited format: the five color-pair
 archetypes, best commons/uncommons per color, combat tricks, mana fixing, the
