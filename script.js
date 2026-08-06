@@ -226,11 +226,10 @@
 
   if(!supportsHover){
     // Touch: click to open (above), click to close (here) — no drag/tilt
-    // gesture at all. cardFace keeps the default pointer-events:none from
-    // .cardpop except for this one listener's purposes, so dragging anywhere,
-    // including across the popped-up card, always just scrolls the page
-    // natively rather than being captured for a tilt effect.
-    cardFace.style.pointerEvents = 'auto';
+    // gesture at all. cardFace only becomes tappable while the popup is
+    // actually shown (see the .cardpop.show rule in CSS) so dragging
+    // anywhere, including across the popped-up card, always just scrolls
+    // the page natively rather than being captured for a tilt effect.
     cardFace.addEventListener('click', function(){ hideCard(); });
   }
 

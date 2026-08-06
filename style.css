@@ -353,7 +353,11 @@
     transition: transform .1s ease-out, scale .1s ease-out;
     scale: 1;
   }
-  .cardpop.show .cardpop-face{ scale: 1.035; }
+  /* pointer-events only turns on while actually visible — otherwise this
+     fixed-position, invisible element would sit on top of whatever's
+     underneath at its last shown spot and silently swallow taps meant for
+     other cards */
+  .cardpop.show .cardpop-face{ scale: 1.035; pointer-events: auto; }
   .cardpop-face::before{
     /* rainbow foil sweep */
     content:""; position:absolute; inset:-20%;
