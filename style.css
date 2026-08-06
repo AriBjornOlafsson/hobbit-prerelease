@@ -359,10 +359,10 @@
     content:""; position:absolute; inset:-20%;
     background: repeating-linear-gradient(115deg,
       transparent 0 6%,
-      rgba(255,80,170,.55) 8%,
-      rgba(255,225,80,.5) 11%,
-      rgba(100,255,190,.5) 14%,
-      rgba(90,140,255,.55) 17%,
+      rgba(255,80,170,.35) 8%,
+      rgba(255,225,80,.32) 11%,
+      rgba(100,255,190,.32) 14%,
+      rgba(90,140,255,.35) 17%,
       transparent 20% 26%
     );
     background-size: 180% 180%;
@@ -373,12 +373,12 @@
   }
   .cardpop-face::after{
     content:""; position:absolute; inset:0;
-    background: radial-gradient(circle at var(--mx,50%) var(--my,50%), rgba(255,255,255,.75), transparent 42%);
+    background: radial-gradient(circle at var(--mx,50%) var(--my,50%), rgba(255,255,255,.45), transparent 42%);
     mix-blend-mode: overlay; opacity:0; transition: opacity .18s ease;
     pointer-events:none;
   }
-  .cardpop.show .cardpop-face::before{ opacity:.9; }
-  .cardpop.show .cardpop-face::after{ opacity:.9; }
+  .cardpop.show .cardpop-face::before{ opacity:.55; }
+  .cardpop.show .cardpop-face::after{ opacity:.5; }
   @media (prefers-reduced-motion: reduce){
     .cardpop-face{ transition:none; scale:1 !important; }
     .cardpop-face::before, .cardpop-face::after{ display:none; }

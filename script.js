@@ -228,12 +228,16 @@
     var container = (widenTo.querySelectorAll('.cardlink').length === 1) ? widenTo : link;
     link.setAttribute('tabindex','0');
     if(supportsHover){
+      // Focus/blur (keyboard nav) only wired up here too — on touch devices,
+      // tapping a tabindex="0" element fires a focus event before the tap's
+      // synthetic click, and showCard()'s DOM mutation there makes the browser
+      // cancel that pending click outright, silently breaking tap-to-open.
       container.addEventListener('mouseenter', function(){ showCard(link); });
       container.addEventListener('mousemove', function(e){ tiltFromEvent(e, container); });
       container.addEventListener('mouseleave', function(){ resetTilt(); hideCard(); });
+      link.addEventListener('focus', function(){ showCard(link); });
+      link.addEventListener('blur', function(){ resetTilt(); hideCard(); });
     }
-    link.addEventListener('focus', function(){ showCard(link); });
-    link.addEventListener('blur', function(){ resetTilt(); hideCard(); });
     container.addEventListener('click', function(e){
       e.preventDefault();
       if(activeLink === link){ hideCard(); } else { showCard(link); }
