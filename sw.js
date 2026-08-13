@@ -1,4 +1,4 @@
-var CACHE_VERSION = 'v1';
+var CACHE_VERSION = 'v2';
 var CACHE_NAME = 'hobbit-guide-' + CACHE_VERSION;
 
 // Regenerate this list any time cards/fonts/icons change — see
@@ -82,6 +82,7 @@ var PRECACHE_URLS = [
   "assets/cards/giantsboulder.jpg",
   "assets/cards/giganticbear.jpg",
   "assets/cards/gildedboat.jpg",
+  "assets/cards/gleamingsplendor.jpg",
   "assets/cards/gloinmighty.jpg",
   "assets/cards/gnashingteeth.jpg",
   "assets/cards/goblinplatemail.jpg",

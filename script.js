@@ -34,6 +34,7 @@
     giantsboulder: "assets/cards/giantsboulder.jpg",
     giganticbear: "assets/cards/giganticbear.jpg",
     gildedboat: "assets/cards/gildedboat.jpg",
+    gleamingsplendor: "assets/cards/gleamingsplendor.jpg",
     gloinmighty: "assets/cards/gloinmighty.jpg",
     gnashingteeth: "assets/cards/gnashingteeth.jpg",
     golemriddle: "assets/cards/golemriddle.jpg",
